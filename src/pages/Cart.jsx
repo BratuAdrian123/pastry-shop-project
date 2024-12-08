@@ -1,13 +1,63 @@
-import { CartItemsContext } from '../App';
+import { CartItemsContext, OrderItemsContext } from '../App';
 import { useContext, useState } from 'react';
 
 function Cart() {
   const cartItemsC = useContext(CartItemsContext);
+  const orderItemsC = useContext(OrderItemsContext);
 
-  let totalItemsPrice = cartItemsC.price.reduce(
-    (acc, cur) => Number(acc) + Number(cur),
-    0
-  );
+  let totalItemsPrice =
+    cartItemsC.cartItems.price.reduce(
+      (acc, cur) => Number(acc) + Number(cur),
+      0
+    ) === 0
+      ? 0
+      : cartItemsC.cartItems.price.reduce(
+          (acc, cur) => Number(acc) + Number(cur),
+          0
+        );
+
+  function handleRemoveProduct() {
+    cartItemsC.setCartItems({
+      name: [],
+      price: [],
+      quantity: [],
+    });
+  }
+
+  const [deliveryCost, setDeliveryCost] = useState('');
+  const [deliveryKey, setDeliveryKey] = useState('');
+
+  const handleDeliveryChange = (event) => {
+    setDeliveryCost(event.target.value);
+    setDeliveryKey(event.target.id);
+    console.log(event.target.id);
+  };
+
+  let totalCartItemsPrice = (
+    Number(totalItemsPrice) + Number(deliveryCost)
+  ).toFixed(2);
+
+  const handleOrder = (event) => {
+    if (cartItemsC.cartItems.name.length > 0) {
+      orderItemsC.setOrderItems({
+        name: cartItemsC.cartItems.name,
+        price: cartItemsC.cartItems.price,
+        quantity: cartItemsC.cartItems.quantity,
+        totalPrice: totalCartItemsPrice,
+        deliveryTime: deliveryKey,
+      });
+
+      cartItemsC.setCartItems({
+        name: [],
+        price: [],
+        quantity: [],
+      });
+
+      setDeliveryCost('0');
+    } else {
+      alert(`No Items inside Cart, go to the Menu`);
+    }
+  };
 
   return (
     <div className="w-fit text-center mr-auto ml-auto mb-[78px]">
@@ -16,21 +66,24 @@ function Cart() {
         <h2 className="m-3 text-2xl">Cart Info</h2>
         <div className="text-start p-3 cart-items-container">
           Cart Items
+          <button
+            className="pl-3 remove-cart-items"
+            onClick={handleRemoveProduct}
+          >
+            Clear Cart
+          </button>
           <p className="p-3">
-            {cartItemsC.name.map((product) => (
-              <div>
-                Product Name: {product}
-                <button className="pl-3">Remove</button>
-              </div>
+            {cartItemsC.cartItems.name.map((product) => (
+              <div>Product Name: {product}</div>
             ))}
           </p>
           <p className="p-3">
-            {cartItemsC.quantity.map((productQuantity) => (
+            {cartItemsC.cartItems.quantity.map((productQuantity) => (
               <div>Product Quantity: {productQuantity}</div>
             ))}
           </p>
           <p className="p-3">
-            {cartItemsC.price.map((productPrice) => (
+            {cartItemsC.cartItems.price.map((productPrice) => (
               <div>Item price: {productPrice}$</div>
             ))}
           </p>
@@ -41,26 +94,28 @@ function Cart() {
           </div>
           <div className="flex items-center pr-2">
             <label htmlFor="quick-delivery" className="p-2">
-              Quick Delivery +9.99$
+              Quick Delivery +10$
             </label>
             <input
               className="input-delivery"
               name="delivery"
-              value="9.99"
+              value="10"
               required
               type="radio"
-              id="quick-delivery"
+              id="10"
+              onChange={handleDeliveryChange}
             />
             <label htmlFor="normal-delivery" className="p-2">
-              Normal Delivery +4.99
+              Normal Delivery +5$
             </label>
             <input
               className="input-delivery"
               name="delivery"
-              value="4.99"
+              value="5"
               required
               type="radio"
-              id="normal-delivery"
+              id="7"
+              onChange={handleDeliveryChange}
             />
             <label htmlFor="slow-delivery" className="p-2">
               Slow Delivery Free
@@ -71,15 +126,16 @@ function Cart() {
               value="0"
               required
               type="radio"
-              id="slow-delivery"
+              id="10"
+              onChange={handleDeliveryChange}
             />
           </div>
         </div>
         <div className="text-center p-3 mt-5 mb-5 price-order-container">
-          <p className="p-2">
-            Total Price: {Number(totalItemsPrice).toFixed(2)}$
-          </p>
-          <button className="p-2 order-button">Order</button>
+          <p className="p-2">Total Price: {totalCartItemsPrice}$</p>
+          <button className="p-2 order-button" onClick={handleOrder}>
+            Order
+          </button>
         </div>
       </div>
     </div>

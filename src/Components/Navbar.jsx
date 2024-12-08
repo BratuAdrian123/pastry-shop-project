@@ -5,19 +5,21 @@ import { useContext, useEffect, useState } from 'react';
 
 function Navbar() {
   const cartItemsC2 = useContext(CartItemsContext);
+
   const [totalItemsQuantity, setTotalItemsQuantity] = useState(0);
   useEffect(() => {
     setTotalItemsQuantity(
-      cartItemsC2.quantity.reduce((acc, cur) => Number(acc) + Number(cur), 0)
+      cartItemsC2.cartItems.quantity.reduce(
+        (acc, cur) => Number(acc) + Number(cur),
+        0
+      ) === 0
+        ? 0
+        : cartItemsC2.cartItems.quantity.reduce(
+            (acc, cur) => Number(acc) + Number(cur),
+            0
+          )
     );
-    console.log(totalItemsQuantity);
-  }, [cartItemsC2.quantity]);
-
-  // let totalItemsQuantity = cartItemsC2.quantity.reduce(
-  //   (acc, cur) => Number(acc) + Number(cur),
-  //   0
-  // );
-  // console.log(totalItemsQuantity);
+  }, [cartItemsC2.cartItems.quantity]);
 
   return (
     <div
@@ -50,9 +52,13 @@ function Navbar() {
             </Link>
           </li>
         ))}
-        {/* .hide class */}
-        <div className="relative cart-quantity">
-          {Number(totalItemsQuantity)}
+
+        <div
+          className={`relative cart-quantity ${
+            totalItemsQuantity === 0 ? 'hide' : ''
+          }`}
+        >
+          {totalItemsQuantity}
         </div>
       </ul>
     </div>

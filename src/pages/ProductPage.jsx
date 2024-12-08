@@ -8,18 +8,14 @@ function ProductPage() {
   const listOfProducts = useContext(ProdList);
   const cartItemsC = useContext(CartItemsContext);
   const param = useParams();
-
   useEffect(() => {
     setItem(() => listOfProducts.find((p) => p.id === param.id));
   }, []);
-
   let [count, setCount] = useState(1);
-
   function handleIncrementClick(e) {
     e.preventDefault();
     setCount((prev) => prev + 1);
   }
-
   function handleDecrementClick(e) {
     e.preventDefault();
     if (count === 0) {
@@ -28,26 +24,29 @@ function ProductPage() {
       setCount((prev) => prev - 1);
     }
   }
-
   function handleSubmit(e) {
     e.preventDefault();
     if (count > 0) {
-      cartItemsC.name.push(item.name);
-      cartItemsC.price.push(
-        count === 1 ? item.price : (item.price * count).toFixed(2)
+      cartItemsC.setCartItems(
+        (prev) => (prev = { ...prev, name: [...prev.name, item.name] })
       );
-      cartItemsC.quantity.push(count);
-      cartItemsC.submited = true;
+      cartItemsC.setCartItems(
+        (prev) =>
+          (prev = {
+            ...prev,
+            price: [...prev.price, (item.price * count).toFixed(2)],
+          })
+      );
+      cartItemsC.setCartItems(
+        (prev) => (prev = { ...prev, quantity: [...prev.quantity, count] })
+      );
     }
-
     console.log(
-      `submited ${cartItemsC.submited} Name: ${cartItemsC.name} Price: ${cartItemsC.price}`
+      `submited ${cartItemsC.cartItems.submited} Name: ${cartItemsC.cartItems.name} Price: ${cartItemsC.cartItems.price}`
     );
-
-    console.log(cartItemsC);
-    return cartItemsC;
+    console.log(cartItemsC.cartItems);
+    return cartItemsC.cartItems;
   }
-
   return (
     <div>
       {item && (
@@ -89,42 +88,46 @@ function ProductPage() {
               Nutrition per serving
             </h2>
             <table className="ml-auto mr-auto product-page-table">
-              <tr className="border">
-                <td className="border p-3">
-                  <strong>
-                    Fatty Calories: {item.nutrition.fattyCalories}
-                  </strong>
-                </td>
-                <td className="p-3">
-                  <strong>
-                    Saturated Fatty Acids: {item.nutrition.saturatedFatAcids}
-                  </strong>
-                </td>
-              </tr>
-              <tr className="border">
-                <td className="border p-3">
-                  <strong>Carbohydrate: {item.nutrition.carbohydrates}</strong>
-                </td>
-                <td className="p-3">
-                  <strong>Sugars: {item.nutrition.sugars}</strong>
-                </td>
-              </tr>
-              <tr className="border">
-                <td className="border p-3">
-                  <strong>Protein: {item.nutrition.proteins}</strong>
-                </td>
-                <td className="p-3">
-                  <strong>Salts: {item.nutrition.salts}</strong>
-                </td>
-              </tr>
+              <tbody>
+                <tr className="border">
+                  <td className="border p-3">
+                    <strong>
+                      Fatty Calories: {item.nutrition.fattyCalories}
+                    </strong>
+                  </td>
+                  <td className="p-3">
+                    <strong>
+                      Saturated Fatty Acids: {item.nutrition.saturatedFatAcids}
+                    </strong>
+                  </td>
+                </tr>
+                <tr className="border">
+                  <td className="border p-3">
+                    <strong>
+                      Carbohydrate: {item.nutrition.carbohydrates}
+                    </strong>
+                  </td>
+                  <td className="p-3">
+                    <strong>Sugars: {item.nutrition.sugars}</strong>
+                  </td>
+                </tr>
+                <tr className="border">
+                  <td className="border p-3">
+                    <strong>Protein: {item.nutrition.proteins}</strong>
+                  </td>
+                  <td className="p-3">
+                    <strong>Salts: {item.nutrition.salts}</strong>
+                  </td>
+                </tr>
+              </tbody>
             </table>
           </div>
           <div className="flex p-2 items-center justify-center text-2xl product-page-allg">
             Allergens:{' '}
-            {item.allergens.map((allg, i) => {
+            {item.allergens.map((allg, e) => {
               for (let i = 0; i <= item.allergens.length; i++) {
                 return (
-                  <p className="p-1" key={i}>
+                  <p className="p-1" key={e}>
                     {allg}
                   </p>
                 );
@@ -136,5 +139,4 @@ function ProductPage() {
     </div>
   );
 }
-
 export default ProductPage;

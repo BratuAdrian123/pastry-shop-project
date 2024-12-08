@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import Carousel from '../Components/Carousel.jsx';
 import { cakes, pastryGoods, tarts, cookies } from './ProductList.jsx';
 
@@ -20,40 +21,48 @@ function Home() {
         </h1>
         <div className="seller-content-container flex flex-wrap justify-around mb-10 mt-10">
           <div className="p-5 mb-3 flex-row text-center seller-container">
-            <img
-              src={cakes[0].img}
-              alt="Cake"
-              className="seller-img w-[200px] h-[200px]"
-            />
-            <div className="mt-3">{cakes[0].name}</div>
-            <div className="mt-3">{cakes[0].price}</div>
+            <Link to={'/menu/' + cakes[0].id}>
+              <img
+                src={cakes[0].img}
+                alt="Cake"
+                className="seller-img w-[200px] h-[200px]"
+              />
+              <div className="mt-3">{cakes[0].name}</div>
+              <div className="mt-3">{cakes[0].price}</div>
+            </Link>
           </div>
           <div className="p-5 mb-3 flex-row text-center seller-container">
-            <img
-              src={tarts[0].img}
-              alt="Tart"
-              className="seller-img w-[200px] h-[200px]"
-            />
-            <div className="mt-3">{tarts[0].name}</div>
-            <div className="mt-3">{tarts[0].price}</div>
+            <Link to={'/menu/' + tarts[0].id}>
+              <img
+                src={tarts[0].img}
+                alt="Tart"
+                className="seller-img w-[200px] h-[200px]"
+              />
+              <div className="mt-3">{tarts[0].name}</div>
+              <div className="mt-3">{tarts[0].price}</div>
+            </Link>
           </div>
           <div className="p-5 mb-3 flex-row text-center seller-container">
-            <img
-              src={pastryGoods[0].img}
-              alt="Pastry Good"
-              className="seller-img w-[200px] h-[200px]"
-            />
-            <div className="mt-3">{pastryGoods[0].name}</div>
-            <div className="mt-3">{pastryGoods[0].price}</div>
+            <Link to={'/menu/' + pastryGoods[0].id}>
+              <img
+                src={pastryGoods[0].img}
+                alt="Pastry Good"
+                className="seller-img w-[200px] h-[200px]"
+              />
+              <div className="mt-3">{pastryGoods[0].name}</div>
+              <div className="mt-3">{pastryGoods[0].price}</div>
+            </Link>
           </div>
           <div className="p-5 mb-3 flex-row text-center seller-container">
-            <img
-              src={cookies[0].img}
-              alt="Cookie"
-              className="seller-img w-[200px] h-[200px]"
-            />
-            <div className="mt-3">{cookies[0].name}</div>
-            <div className="mt-3">{cookies[0].price}</div>
+            <Link to={'/menu/' + cookies[0].id}>
+              <img
+                src={cookies[0].img}
+                alt="Cookie"
+                className="seller-img w-[200px] h-[200px]"
+              />
+              <div className="mt-3">{cookies[0].name}</div>
+              <div className="mt-3">{cookies[0].price}</div>
+            </Link>
           </div>
         </div>
         <div className="home-footer flex-row justify-center">

@@ -7,6 +7,7 @@ import { productList } from './pages/ProductList';
 
 export const ProdList = createContext();
 export const CartItemsContext = createContext();
+export const OrderItemsContext = createContext();
 
 function App() {
   const [prodList, setProdList] = useState(productList);
@@ -17,40 +18,21 @@ function App() {
     quantity: [],
   });
 
-  function handleRemoveProduct(product) {
-    if (cartItems.name.length === 0) {
-      <div>
-        <p>Item Name: </p>
-        <p>Item Quantity: </p>
-        <p>Item Price: </p>
-      </div>;
-    } else {
-      cartItems.name.pop();
-      cartItems.quantity.pop();
-      cartItems.price.pop();
-    }
-  }
-
-  // let cartItems = {
-  //   name: [],
-  //   price: [],
-  //   quantity: [],
-  // };
-
-  // let totalItemsPrice = cartItems.price.reduce(
-  //   (acc, cur) => (Number(acc) + Number(cur)).toFixed(2),
-  //   0
-  // );
+  const [orderItems, setOrderItems] = useState([
+    { name: [], price: [], quantity: [], totalPrice: '', deliveryTime: '' },
+  ]);
 
   return (
     <>
       <ProdList.Provider value={prodList}>
-        <CartItemsContext.Provider value={cartItems}>
-          <Navbar />
+        <CartItemsContext.Provider value={{ cartItems, setCartItems }}>
+          <OrderItemsContext.Provider value={{ orderItems, setOrderItems }}>
+            <Navbar />
 
-          <Outlet />
+            <Outlet />
 
-          <Footer />
+            <Footer />
+          </OrderItemsContext.Provider>
         </CartItemsContext.Provider>
       </ProdList.Provider>
     </>
