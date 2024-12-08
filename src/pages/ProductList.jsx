@@ -3,7 +3,7 @@ export const cakes = [
     id: 'cake1',
     type: 'cake',
     price: '35$',
-    name: 'Rose Red Velvet',
+    name: 'Rose Red Velvet Cake',
     img: 'pictures/cake1.jpg',
     description: 'The fluffy top and the graceful cream create a fabulous cake',
     nutrition: {
@@ -338,7 +338,7 @@ export const eclairs = [
     id: 'eclair1',
     type: 'eclair',
     price: '2.50$',
-    name: 'Raspberry Blush',
+    name: 'Raspberry Blush Eclair',
     img: 'pictures/eclair1.jpg',
     description: 'Eclair with raspberry cream',
     nutrition: {
@@ -622,7 +622,7 @@ export const tarts = [
     id: 'tart1',
     type: 'tart',
     price: '10$',
-    name: 'Coffee & Black Sesame',
+    name: 'Coffee & Black Sesame Tart',
     img: 'pictures/tart1.jpg',
     description:
       'A combination of special flavors, which you will love from the moment you see it. Coffee blends wonderfully with the taste of almonds and caramel, creating a tart full of delights',
@@ -861,9 +861,10 @@ export const productList = [
   {
     id: 'cake1',
     type: 'cake',
-    price: '35$',
-    name: 'Rose Red Velvet',
-    img: 'pictures/cake1.jpg',
+    category: 'Cakes',
+    price: '35',
+    name: 'Rose Red Velvet Cake',
+    img: '/pictures/cake1.jpg',
     description: 'The fluffy top and the graceful cream create a fabulous cake',
     nutrition: {
       fattyCalories: '80.15g',
@@ -878,9 +879,10 @@ export const productList = [
   {
     id: 'cake2',
     type: 'cake',
-    price: '45$',
-    name: 'Praline Choco',
-    img: 'pictures/cake2.jpg',
+    category: 'Cakes',
+    price: '45',
+    name: 'Praline Choco Cake',
+    img: '/pictures/cake2.jpg',
     description:
       'Praline Choco Cake is a delicious mix of crunchy and fine textures and dense flavors',
     nutrition: {
@@ -896,9 +898,10 @@ export const productList = [
   {
     id: 'cake3',
     type: 'cake',
-    price: '40$',
-    name: 'Berry Choco',
-    img: 'pictures/cake3.jpg',
+    category: 'Cakes',
+    price: '40',
+    name: 'Berry Choco Cake',
+    img: '/pictures/cake3.jpg',
     description:
       'The Berry Choco cake comes with aromatic but perfectly balanced surprises',
     nutrition: {
@@ -914,9 +917,10 @@ export const productList = [
   {
     id: 'cake4',
     type: 'cake',
-    price: '40$',
-    name: 'Cherry Vanilla',
-    img: 'pictures/cake4.jpg',
+    category: 'Cakes',
+    price: '40',
+    name: 'Cherry Vanilla Cake',
+    img: '/pictures/cake4.jpg',
     description:
       'Cherry Vanilla is a classic cake, a perfect combination between the delicate aroma of vanilla and the sweet-sour taste of cherries',
     nutrition: {
@@ -932,9 +936,10 @@ export const productList = [
   {
     id: 'cake5',
     type: 'cake',
-    price: '40$',
-    name: 'Cherry Choco',
-    img: 'pictures/cake5.jpg',
+    category: 'Cakes',
+    price: '40',
+    name: 'Cherry Choco Cake',
+    img: '/pictures/cake5.jpg',
     description:
       'A tasty chocolate treat in which cherries come to balance the strong taste and give it a refresh',
     nutrition: {
@@ -950,9 +955,10 @@ export const productList = [
   {
     id: 'cake6',
     type: 'cake',
-    price: '40$',
-    name: 'Black Orange',
-    img: 'pictures/cake6.jpg',
+    category: 'Cakes',
+    price: '40',
+    name: 'Black Orange Cake',
+    img: '/pictures/cake6.jpg',
     description:
       'The Black Orange cake is the embodiment of perfection. Dark chocolate blends wonderfully with the aroma of juicy and tasty oranges',
     nutrition: {
@@ -968,9 +974,10 @@ export const productList = [
   {
     id: 'cookie1',
     type: 'cookie',
-    price: '4$',
+    category: 'Cookies',
+    price: '4',
     name: 'Minidrip',
-    img: 'pictures/cookie1.jpg',
+    img: '/pictures/cookie1.jpg',
     description:
       'Cake with cocoa top, Belgian white chocolate mousse with mixed berries',
     nutrition: {
@@ -986,9 +993,10 @@ export const productList = [
   {
     id: 'cookie2',
     type: 'cookie',
-    price: '3$',
+    category: 'Cookies',
+    price: '3',
     name: 'Ispahan',
-    img: 'pictures/cookie2.jpg',
+    img: '/pictures/cookie2.jpg',
     description:
       'Macarons with rose cream, white chocolate ganache, lychee and raspberry',
     nutrition: {
@@ -1004,9 +1012,10 @@ export const productList = [
   {
     id: 'cookie3',
     type: 'cookie',
-    price: '3$',
+    category: 'Cookies',
+    price: '3',
     name: 'Amandine',
-    img: 'pictures/cookie3.jpg',
+    img: '/pictures/cookie3.jpg',
     description: 'Cocoa cake, gold chocolate syrup, rum and cocoa cream',
     nutrition: {
       fattyCalories: '23.58g',
@@ -1021,9 +1030,10 @@ export const productList = [
   {
     id: 'cookie4',
     type: 'cookie',
-    price: '2.80$',
+    category: 'Cookies',
+    price: '2.80',
     name: 'Pistachio tart',
-    img: 'pictures/cookie4.jpg',
+    img: '/pictures/cookie4.jpg',
     description:
       'Tart with pistachio cream, ganache and crunchy pistachio praline',
     nutrition: {
@@ -1044,9 +1054,10 @@ export const productList = [
   {
     id: 'cookie5',
     type: 'cookie',
-    price: '2.80$',
+    category: 'Cookies',
+    price: '2.80',
     name: 'Pavlova',
-    img: 'pictures/cookie5.jpg',
+    img: '/pictures/cookie5.jpg',
     description:
       'Meringue with mascarpone cream, strawberry jelly and red fruits',
     nutrition: {
@@ -1062,9 +1073,10 @@ export const productList = [
   {
     id: 'cookie6',
     type: 'cookie',
-    price: '4$',
+    category: 'Cookies',
+    price: '4',
     name: 'Melia',
-    img: 'pictures/cookie6.jpg',
+    img: '/pictures/cookie6.jpg',
     description:
       'Almond crust with a crunchy layer of feuilletine and chocolate, passion fruit mousse and cremeaux and orange confit insert',
     nutrition: {
@@ -1080,9 +1092,10 @@ export const productList = [
   {
     id: 'macaron1',
     type: 'macaron',
-    price: '1$',
+    category: 'Macarons',
+    price: '1',
     name: 'Vanilla macaron',
-    img: 'pictures/macaron1.jpg',
+    img: '/pictures/macaron1.jpg',
     description: 'Macarons with vanilla cream',
     nutrition: {
       fattyCalories: '20.71g',
@@ -1097,9 +1110,10 @@ export const productList = [
   {
     id: 'macaron2',
     type: 'macaron',
-    price: '1$',
+    category: 'Macarons',
+    price: '1',
     name: 'Chocolate macaron',
-    img: 'pictures/macaron2.jpg',
+    img: '/pictures/macaron2.jpg',
     description: 'Macarons with chocolate cream',
     nutrition: {
       fattyCalories: '20.82g',
@@ -1114,9 +1128,10 @@ export const productList = [
   {
     id: 'macaron3',
     type: 'macaron',
-    price: '1$',
+    category: 'Macarons',
+    price: '1',
     name: 'Macaron gianduja',
-    img: 'pictures/macaron3.jpg',
+    img: '/pictures/macaron3.jpg',
     description: 'Macarons with gianduja cream',
     nutrition: {
       fattyCalories: '20.82g',
@@ -1136,9 +1151,10 @@ export const productList = [
   {
     id: 'macaron4',
     type: 'macaron',
-    price: '1$',
+    category: 'Macarons',
+    price: '1',
     name: 'Caramel macaron',
-    img: 'pictures/macaron4.jpg',
+    img: '/pictures/macaron4.jpg',
     description: 'Macarons with caramel cream',
     nutrition: {
       fattyCalories: '20.82g',
@@ -1153,9 +1169,10 @@ export const productList = [
   {
     id: 'macaron5',
     type: 'macaron',
-    price: '1$',
+    category: 'Macarons',
+    price: '1',
     name: 'Macaron with chocolate cream and bananas',
-    img: 'pictures/macaron5.jpg',
+    img: '/pictures/macaron5.jpg',
     description: 'Macarons with banana cream',
     nutrition: {
       fattyCalories: '20.82g',
@@ -1170,9 +1187,10 @@ export const productList = [
   {
     id: 'macaron6',
     type: 'macaron',
-    price: '1$',
+    category: 'Macarons',
+    price: '1',
     name: 'Coconut macaron with raspberry',
-    img: 'pictures/macaron6.jpg',
+    img: '/pictures/macaron6.jpg',
     description: 'Macarons with coconut cream and raspberry confit',
     nutrition: {
       fattyCalories: '20.71g',
@@ -1187,9 +1205,10 @@ export const productList = [
   {
     id: 'eclair1',
     type: 'eclair',
-    price: '2.50$',
-    name: 'Raspberry Blush',
-    img: 'pictures/eclair1.jpg',
+    category: 'Eclairs',
+    price: '2.50',
+    name: 'Raspberry Blush Eclair',
+    img: '/pictures/eclair1.jpg',
     description: 'Eclair with raspberry cream',
     nutrition: {
       fattyCalories: '19.84g',
@@ -1204,9 +1223,10 @@ export const productList = [
   {
     id: 'eclair2',
     type: 'eclair',
-    price: '2.50$',
-    name: 'Vanilla Cream',
-    img: 'pictures/eclair2.jpg',
+    category: 'Eclairs',
+    price: '2.50',
+    name: 'Vanilla Cream Eclair',
+    img: '/pictures/eclair2.jpg',
     description: 'Eclair with vanilla cream',
     nutrition: {
       fattyCalories: '22.04g',
@@ -1221,9 +1241,10 @@ export const productList = [
   {
     id: 'eclair3',
     type: 'eclair',
-    price: '2.50$',
-    name: 'Chocolate Mood',
-    img: 'pictures/eclair3.jpg',
+    category: 'Eclairs',
+    price: '2.50',
+    name: 'Chocolate Mood Eclair',
+    img: '/pictures/eclair3.jpg',
     description: 'Eclair with chocolate cream',
     nutrition: {
       fattyCalories: '22.84g',
@@ -1238,9 +1259,10 @@ export const productList = [
   {
     id: 'eclair4',
     type: 'eclair',
-    price: '2.50$',
-    name: 'Mango Wish',
-    img: 'pictures/eclair4.jpg',
+    category: 'Eclairs',
+    price: '2.50',
+    name: 'Mango Wish Eclair',
+    img: '/pictures/eclair4.jpg',
     description: 'Eclair with mango cream',
     nutrition: {
       fattyCalories: '17.67g',
@@ -1255,9 +1277,10 @@ export const productList = [
   {
     id: 'eclair5',
     type: 'eclair',
-    price: '2.50$',
-    name: 'Salty Caramel',
-    img: 'pictures/eclair5.jpg',
+    category: 'Eclairs',
+    price: '2.50',
+    name: 'Salty Caramel Eclair',
+    img: '/pictures/eclair5.jpg',
     description: 'Eclair with salted caramel cream',
     nutrition: {
       fattyCalories: '28.59g',
@@ -1272,9 +1295,10 @@ export const productList = [
   {
     id: 'eclair6',
     type: 'eclair',
-    price: '2.50$',
-    name: 'Coffee Cream',
-    img: 'pictures/eclair6.jpg',
+    category: 'Eclairs',
+    price: '2.50',
+    name: 'Coffee Cream Eclair',
+    img: '/pictures/eclair6.jpg',
     description: 'Eclair with coffee cream',
     nutrition: {
       fattyCalories: '18.65g',
@@ -1289,9 +1313,10 @@ export const productList = [
   {
     id: 'eclair7',
     type: 'eclair',
-    price: '2.50$',
-    name: 'Caramel Cream',
-    img: 'pictures/eclair7.jpg',
+    category: 'Eclairs',
+    price: '2.50',
+    name: 'Caramel Cream Eclair',
+    img: '/pictures/eclair7.jpg',
     description: 'Eclair with sweet caramel cream and smooth milk chocolate',
     nutrition: {
       fattyCalories: '25.18g',
@@ -1306,9 +1331,10 @@ export const productList = [
   {
     id: 'eclair8',
     type: 'eclair',
-    price: '2.50$',
-    name: 'Coconut Dream',
-    img: 'pictures/eclair8.jpg',
+    category: 'Eclairs',
+    price: '2.50',
+    name: 'Coconut Dream Eclair',
+    img: '/pictures/eclair8.jpg',
     description: 'Eclair with coconut cream',
     nutrition: {
       fattyCalories: '22.21g',
@@ -1323,9 +1349,10 @@ export const productList = [
   {
     id: 'pastryGood1',
     type: 'pastryGood',
-    price: '1$',
+    category: 'Pastry Goods',
+    price: '1',
     name: 'Croissant',
-    img: 'pictures/pastryGood1.jpg',
+    img: '/pictures/pastryGood1.jpg',
     description:
       'Every bite is a refined experience because our croissant is generous.',
     nutrition: {
@@ -1341,9 +1368,10 @@ export const productList = [
   {
     id: 'pastryGood2',
     type: 'pastryGood',
-    price: '2$',
+    category: 'Pastry Goods',
+    price: '2',
     name: 'Praline Croissant',
-    img: 'pictures/pastryGood2.jpg',
+    img: '/pictures/pastryGood2.jpg',
     description:
       'Every bite is an explosion of taste thanks to our hazelnut cream, made from fresh and genuine hazelnuts',
     nutrition: {
@@ -1359,9 +1387,10 @@ export const productList = [
   {
     id: 'pastryGood3',
     type: 'pastryGood',
-    price: '2$',
+    category: 'Pastry Goods',
+    price: '2',
     name: 'Salted Caramel Vanilla Croissant',
-    img: 'pictures/pastryGood3.jpg',
+    img: '/pictures/pastryGood3.jpg',
     description:
       'Every bite is a refined experience, as our croissant is generously filled with a delicate and rich vanilla cream and salted caramel insert',
     nutrition: {
@@ -1377,9 +1406,10 @@ export const productList = [
   {
     id: 'pastryGood4',
     type: 'pastryGood',
-    price: '2$',
+    category: 'Pastry Goods',
+    price: '2',
     name: 'Raspberry Vanilla Croissant',
-    img: 'pictures/pastryGood4.jpg',
+    img: '/pictures/pastryGood4.jpg',
     description:
       'Every bite is a refined experience, as our croissant is generously filled with a delicate and rich vanilla cream and raspberry insert',
     nutrition: {
@@ -1395,9 +1425,10 @@ export const productList = [
   {
     id: 'pastryGood5',
     type: 'pastryGood',
-    price: '1.50$',
+    category: 'Pastry Goods',
+    price: '1.50',
     name: 'Mini Babka',
-    img: 'pictures/pastryGood5.jpg',
+    img: '/pictures/pastryGood5.jpg',
     description:
       'The balanced taste between the crunchy butter, the nutty chocolate cream and the rich flavor of the fruit shit creates a symphony of flavors that delights the senses',
     nutrition: {
@@ -1413,9 +1444,10 @@ export const productList = [
   {
     id: 'pastryGood6',
     type: 'pastryGood',
-    price: '2.30$',
+    category: 'Pastry Goods',
+    price: '2.30',
     name: 'Cookie Caramel NY Good',
-    img: 'pictures/pastryGood6.jpg',
+    img: '/pictures/pastryGood6.jpg',
     description:
       'A puff pastry with a crunchy texture provided by the cookie with chocolate drinks and salted caramel insert',
     nutrition: {
@@ -1430,9 +1462,11 @@ export const productList = [
   },
   {
     id: 'pastryGood7',
-    price: '2.30$',
+    type: 'pastryGood',
+    category: 'Pastry Goods',
+    price: '2.30',
     name: 'New York Rolls',
-    img: 'pictures/pastryGood7.jpg',
+    img: '/pictures/pastryGood7.jpg',
     description:
       'New York Rolls are a true phenomenon in the global dessert industry, conquering online and offline in a few months and gathering endless queues at the door of confectionery',
     nutrition: {
@@ -1447,9 +1481,11 @@ export const productList = [
   },
   {
     id: 'pastryGood8',
-    price: '2.30$',
+    type: 'pastryGood',
+    category: 'Pastry Goods',
+    price: '2.30',
     name: 'Dubai to NY Good',
-    img: 'pictures/pastryGood8.jpg',
+    img: '/pictures/pastryGood8.jpg',
     description:
       'Crisp puff pastry, filled with kataif and pistachio cream, perfected with chocolate ganache... an explosion of flavors that conquers you instantly',
     nutrition: {
@@ -1465,9 +1501,10 @@ export const productList = [
   {
     id: 'tart1',
     type: 'tart',
-    price: '10$',
-    name: 'Coffee & Black Sesame',
-    img: 'pictures/tart1.jpg',
+    category: 'Tarts',
+    price: '10',
+    name: 'Coffee & Black Sesame Tart',
+    img: '/pictures/tart1.jpg',
     description:
       'A combination of special flavors, which you will love from the moment you see it. Coffee blends wonderfully with the taste of almonds and caramel, creating a tart full of delights',
     nutrition: {
@@ -1483,9 +1520,10 @@ export const productList = [
   {
     id: 'tart2',
     type: 'tart',
-    price: '10$',
-    name: 'Blackberry & Black Chocolate',
-    img: 'pictures/tart2.jpg',
+    category: 'Tarts',
+    price: '10',
+    name: 'Blackberry & Black Chocolate Tart',
+    img: '/pictures/tart2.jpg',
     description:
       'A refined dessert, perfect for lovers of intense tastes. The special aromas of almonds and chocolate come over the tender dough',
     nutrition: {
@@ -1501,9 +1539,10 @@ export const productList = [
   {
     id: 'tart3',
     type: 'tart',
-    price: '10$',
+    category: 'Tarts',
+    price: '10',
     name: 'Exotic Tart',
-    img: 'pictures/tart3.jpg',
+    img: '/pictures/tart3.jpg',
     description:
       'A tart with an exotic and colorful taste, a story in which fruity flavors create surprise after surprise, all extraordinarily delicious',
     nutrition: {
@@ -1519,9 +1558,10 @@ export const productList = [
   {
     id: 'tart4',
     type: 'tart',
-    price: '10$',
-    name: 'Strawberry & White Chocolate',
-    img: 'pictures/tart4.jpg',
+    category: 'Tarts',
+    price: '10',
+    name: 'Strawberry & White Chocolate Tart',
+    img: '/pictures/tart4.jpg',
     description:
       'The combination of white chocolate and strawberries is irresistible, and this tart perfectly combines the sweetness of chocolate with the fresh aroma of fruit',
     nutrition: {
@@ -1537,9 +1577,10 @@ export const productList = [
   {
     id: 'tart5',
     type: 'tart',
-    price: '10$',
-    name: 'Lemon Meringue',
-    img: 'pictures/tart5.jpg',
+    category: 'Tarts',
+    price: '10',
+    name: 'Lemon Meringue Tart',
+    img: '/pictures/tart5.jpg',
     description:
       'The lemon and meringue tart is a fine and refreshing dessert, a perfectly balanced combination between the sour taste of the lemon and the sweetness of the meringue',
     nutrition: {
@@ -1555,9 +1596,10 @@ export const productList = [
   {
     id: 'tart6',
     type: 'tart',
-    price: '10$',
-    name: 'All Nuts',
-    img: 'pictures/tart6.jpg',
+    category: 'Tarts',
+    price: '10',
+    name: 'All Nuts Tart',
+    img: '/pictures/tart6.jpg',
     description:
       'This tart is an irresistible dessert, full of flavor. The chocolate and sweet praline placed on the crispy dough harmonize perfectly with the caramelized nuts, creating a special treat',
     nutrition: {
@@ -1573,9 +1615,10 @@ export const productList = [
   {
     id: 'tart7',
     type: 'tart',
-    price: '10$',
-    name: 'Matcha Raspberry',
-    img: 'pictures/tart7.jpg',
+    category: 'Tarts',
+    price: '10',
+    name: 'Matcha Raspberry Tart',
+    img: '/pictures/tart7.jpg',
     description:
       'This tart is a light and surprising combination of tastes, refreshing and smooth. It conquers you from the first spoonful with the perfect harmony',
     nutrition: {
@@ -1591,9 +1634,10 @@ export const productList = [
   {
     id: 'plate1',
     type: 'plate',
-    price: '5$',
+    category: 'Mini Sweet Plates',
+    price: '5',
     name: 'Mini Pavlova',
-    img: 'pictures/plate1.jpg',
+    img: '/pictures/plate1.jpg',
     description:
       'Pavlova is a spectacular cake both in terms of design and flavors',
     nutrition: {
@@ -1609,9 +1653,10 @@ export const productList = [
   {
     id: 'plate2',
     type: 'plate',
-    price: '5$',
+    category: 'Mini Sweet Plates',
+    price: '5',
     name: 'Mini Tarts',
-    img: 'pictures/plate2.jpg',
+    img: '/pictures/plate2.jpg',
     description:
       'Tender dough with a slightly crispy shell and fine cream, all completed with a wonderful decoration of fruit, meringue or caramelized nuts',
     nutrition: {
@@ -1627,9 +1672,10 @@ export const productList = [
   {
     id: 'plate3',
     type: 'plate',
-    price: '5$',
+    category: 'Mini Sweet Plates',
+    price: '5',
     name: 'Mini Cannoli',
-    img: 'pictures/plate3.jpg',
+    img: '/pictures/plate3.jpg',
     description:
       'Mini cannoli packages bring you the ideal combination of soft and sweet dough and aromatic and refreshing ricotta cream for dessert',
     nutrition: {
@@ -1645,9 +1691,10 @@ export const productList = [
   {
     id: 'plate4',
     type: 'plate',
-    price: '5$',
+    category: 'Mini Sweet Plates',
+    price: '5',
     name: 'Cake Pops',
-    img: 'pictures/plate4.jpg',
+    img: '/pictures/plate4.jpg',
     description:
       'Lollipops are some of the most popular event desserts. They are easy to eat, with the most delicious flavors and create a very pleasant visual effect',
     nutrition: {
@@ -1663,9 +1710,10 @@ export const productList = [
   {
     id: 'plate5',
     type: 'plate',
-    price: '5$',
+    category: 'Mini Sweet Plates',
+    price: '5',
     name: 'Salted Caramel Cheesecake',
-    img: 'pictures/plate5.jpg',
+    img: '/pictures/plate5.jpg',
     description:
       'Delicate cheese, friendly crust and salted caramel topping. These mini cheesecakes create a spectacle of textures and tastes',
     nutrition: {
@@ -1681,9 +1729,10 @@ export const productList = [
   {
     id: 'plate6',
     type: 'plate',
-    price: '5$',
+    category: 'Mini Sweet Plates',
+    price: '5',
     name: 'Berry Cheesecake',
-    img: 'pictures/plate6.jpg',
+    img: '/pictures/plate6.jpg',
     description:
       "They are good-looking, attractive and, above all, delicious. Mini cheesecakes are the dessert you can't go wrong with",
     nutrition: {

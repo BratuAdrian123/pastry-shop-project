@@ -34,14 +34,6 @@ function Menu() {
             <a href="#plates">Mini Sweets Plates</a>
           </li>
         </ul>
-        {/* <div className="flex justify-center p-5">
-          <input
-            type="text"
-            placeholder="Search for a Product"
-            className="menu-search-bar outline-none w-full max-w-[450px] min-w-[150px] rounded-md text-start placeholder-current text-2xl p-3 font-semibold"
-          />
-        </div>
-        <div>Found searched item</div> */}
         <SearchBar></SearchBar>
         <h1 className="text-center text-4xl p-3">Explore the Menu</h1>
       </div>

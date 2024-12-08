@@ -1,6 +1,24 @@
 import { Link } from 'react-router-dom';
+import { navbarList } from '../pages/NavbarList';
+import { CartItemsContext } from '../App';
+import { useContext, useEffect, useState } from 'react';
 
 function Navbar() {
+  const cartItemsC2 = useContext(CartItemsContext);
+  const [totalItemsQuantity, setTotalItemsQuantity] = useState(0);
+  useEffect(() => {
+    setTotalItemsQuantity(
+      cartItemsC2.quantity.reduce((acc, cur) => Number(acc) + Number(cur), 0)
+    );
+    console.log(totalItemsQuantity);
+  }, [cartItemsC2.quantity]);
+
+  // let totalItemsQuantity = cartItemsC2.quantity.reduce(
+  //   (acc, cur) => Number(acc) + Number(cur),
+  //   0
+  // );
+  // console.log(totalItemsQuantity);
+
   return (
     <div
       className=" navbar  flex w-full justify-between items-center "
@@ -8,7 +26,7 @@ function Navbar() {
     >
       <div className="flex justify-center w-[150px] items-center text-lg font-bold  ">
         <img
-          src="pictures/logo.png"
+          src="/pictures/logo.png"
           alt="logo"
           className="w-[60px]"
           title="Logo"
@@ -16,83 +34,26 @@ function Navbar() {
         <h2 className="navbar-text">Pastry Shop</h2>
       </div>
       <ul className="flex w-[800px] h-[auto] justify-around items-center">
-        <li className="navbar-li hover:p-2 rounded-md">
-          <Link
-            to="/"
-            className="flex flex-column items-center text-lg font-bold"
-          >
-            <img
-              src="pictures/home-icon.png"
-              alt="home-icon"
-              className="w-[30px]"
-              title="Home Page"
-            />
-            <span className="navbar-text">Home</span>
-          </Link>
-        </li>
-        <li className="navbar-li hover:p-2 rounded-md">
-          <Link to="/about" className="flex items-center text-lg font-bold">
-            <img
-              src="pictures/about-icon.png"
-              alt="about-icon"
-              className="w-[30px]"
-              title="Contact & About"
-            />
-            <span className="navbar-text">Contact & About</span>
-          </Link>
-        </li>
-        <li className="navbar-li hover:p-2 rounded-md">
-          <Link to="/menu" className="flex items-center text-lg font-bold">
-            <img
-              src="pictures/menu.png"
-              alt="menu-icon"
-              className="w-[30px]"
-              title="Menu"
-            />
-            <span className="navbar-text">Menu</span>
-          </Link>
-        </li>
-        <li className="navbar-li hover:p-2 rounded-md">
-          <div className="relative">
-            <Link to="/cart" className="flex items-center text-lg font-bold">
+        {navbarList.map((navItem, i) => (
+          <li className="navbar-li hover:p-2 rounded-md" key={i}>
+            <Link
+              to={navItem.url}
+              className="flex flex-column items-center text-lg font-bold"
+            >
               <img
-                src="pictures/cart.png"
-                alt="cart-icon"
+                src={navItem.img}
+                alt={navItem.name}
                 className="w-[30px]"
-                title="Cart"
+                title={navItem.name}
               />
-              <span
-                className="absolute bottom-[11px]
-              left-[8px] cart-quantity text-center "
-              >
-                0
-              </span>
-              <span className="navbar-text">Cart</span>
+              <span className="navbar-text">{navItem.name}</span>
             </Link>
-          </div>
-        </li>
-        <li className="navbar-li hover:p-2 rounded-md">
-          <Link to="/login" className="flex items-center text-lg font-bold">
-            <img
-              src="pictures/login.png"
-              alt="login-icon"
-              className="w-[30px]"
-              title="Login"
-            />
-            <span className="navbar-text">Login</span>
-          </Link>
-        </li>
-        <li className="navbar-li hover:p-2 rounded-md">
-          <Link to="/account" className="flex items-center text-lg font-bold">
-            <img
-              src="pictures/account.png"
-              alt="account-icon"
-              className="w-[30px]"
-              title="Account"
-            />
-            <span className="navbar-text">Account</span>
-          </Link>
-        </li>
+          </li>
+        ))}
+        {/* .hide class */}
+        <div className="relative cart-quantity">
+          {Number(totalItemsQuantity)}
+        </div>
       </ul>
     </div>
   );

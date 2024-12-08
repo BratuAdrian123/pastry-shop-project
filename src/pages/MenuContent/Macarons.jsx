@@ -56,28 +56,13 @@ function Macarons() {
                 className="menu-content-img w-[200px] m-auto h-[200px] rounded-full mb-4"
               />
               <h3 className="text-2xl font-semibold pb-2">{product.name}</h3>
-              <div className="quantity-container flex justify-evenly h-[40px] ">
-                <input
-                  type="number"
-                  placeholder="0"
-                  className="w-[50px] h-auto quantity-input outline-none text-2xl text-center [&::-webkit-inner-spin-button]:appearance-none"
-                />
-                <button className="w-[50px] text-2xl h-auto quantity-button">
-                  +
-                </button>
-                <button className="w-[50px] text-2xl h-auto quantity-button">
-                  -
-                </button>
-              </div>
-              <p className="p-2">
+
+              <p className="p-2  mb-3">
                 <strong>Price: {product.price}</strong>
               </p>
               <Link to={'/menu/' + product.id} className="more-info-link">
                 More Info
               </Link>
-              <div className="p-2">
-                <button>Add to Cart</button>
-              </div>
             </div>
           ))}
       </div>

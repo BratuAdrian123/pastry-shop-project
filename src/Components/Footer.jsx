@@ -20,7 +20,7 @@ function Footer() {
               className="text-lg flex"
             >
               <img
-                src="pictures/twitter.png"
+                src="/pictures/twitter.png"
                 alt="twitter-icon"
                 className="w-[22px]"
               />
@@ -34,7 +34,7 @@ function Footer() {
               className="text-lg flex"
             >
               <img
-                src="pictures/facebook.png"
+                src="/pictures/facebook.png"
                 alt="facebook-icon"
                 className="w-[22px]"
               />
@@ -48,7 +48,7 @@ function Footer() {
               className="text-lg flex"
             >
               <img
-                src="pictures/instagram.png"
+                src="/pictures/instagram.png"
                 alt="instagram-icon"
                 className="w-[22px]"
               />

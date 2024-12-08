@@ -52,26 +52,17 @@ body {
   color: #ff9f01;
 }
 
-.quantity-input {
+.more-info-link {
   background-color: #ff9f01;
   color: #faf8ee;
-  border: solid 2px #fbe6bf;
+  border: 3px solid #fbe6bf;
+  padding: 10px;
   border-radius: 10px;
 }
 
-.quantity-button {
-  background-color: #ff9f01;
-  color: #faf8ee;
-  border: solid 2px #fbe6bf;
-  border-radius: 10px;
-}
-
-.cart-quantity {
-  background-color: red;
-  color: #faf8ee;
-  width: 28px;
-  border-radius: 50%;
-  box-sizing: border-box;
+.more-info-link:hover {
+  background-color: #faf8ee;
+  color: #ff9f01;
 }
 
 /* Home page */
@@ -235,6 +226,16 @@ body {
 
 /* cart */
 
+.cart-quantity {
+  position: relative;
+  left: -40%;
+  border-radius: 50px;
+  padding-left: 8px;
+  padding-right: 8px;
+  background-color: red;
+  color: #faf8ee;
+}
+
 .cart-info-container {
   background-color: #faf8ee;
   color: #ff9f01;
@@ -297,6 +298,56 @@ input.input-delivery {
   padding-right: 12px;
   border-radius: 10px;
   font-weight: bold;
+}
+
+/* product page */
+
+.product-page-table {
+  background-color: #faf8ee;
+  color: #ff9f01;
+  border-radius: 20px;
+  margin-top: 20px;
+}
+
+.product-page-table td,
+.product-page-table tr {
+  border-color: #ff9f01;
+  padding: 15px;
+  text-align: center;
+}
+
+.product-page-allg {
+  margin-top: 20px;
+  text-decoration: underline;
+}
+
+.product-page-img {
+  border-radius: 50%;
+}
+
+.border-count {
+  background-color: #faf8ee;
+  color: #ff9f01;
+  border-color: #ff9f01;
+}
+
+.border-count:hover {
+  background-color: #ff9f01;
+  border-color: #faf8ee;
+  color: #faf8ee;
+}
+
+.border-button {
+  border-radius: 10px;
+}
+
+.border-button:hover {
+  background-color: #faf8ee;
+  color: #ff9f01;
+}
+
+.nutrition-heading {
+  text-decoration: underline;
 }
 
 @keyframes rotating {
